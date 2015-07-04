@@ -1,0 +1,33 @@
+== README
+
+Complete replication from {rails-4-omniauth-using-devise-with-twitter-facebook-and-linkedin}[http://sourcey.com/rails-4-omniauth-using-devise-with-twitter-facebook-and-linkedin/]
+
+Works good for {fb}[www.facebook.com] and {twitter}[www.twitter.com]
+
+For {LinkedIn}[linkedin.com] email and name isn't getting stored, even though API call is returning the part.
+
+Twitter doesn't return <tt>email</tt>, so another step is being added in the app.
+
+== Generate App ID and App Secret token
+
+{developers.facebook.com}[https://developers.facebook.com/]
+ Settings link - Advanced Tab: Valid OAuth redirect URIs: http://127.0.0.1:3000/
+ 
+{apps.twitter.com/}[https://apps.twitter.com/]
+ Website: http://127.0.0.1:3000/
+ Callback URL: http://127.0.0.1:3000/
+
+{linkedin.com/secure/developer}[https://www.linkedin.com/secure/developer]
+ Website URL:http://127.0.0.1:3000/
+ OAuth 2.0 Redirect URLs: http://127.0.0.1:3000/ 
+ 
+{console.developers.google.com}[https://console.developers.google.com/]
+ create App project 
+ Enable Gmail Api, Gmail Contact Api etc..,
+ Website URL:http://127.0.0.1:3000/
+ 
+ OAuth 2.0 Redirect URLs: http://127.0.0.1:3000/users/auth/google_oauth2/callback
+
+Store AppId and Secret key in <tt>devise.rb</tt>
+
+Go on ... get on with it now!
